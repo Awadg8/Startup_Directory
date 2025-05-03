@@ -24,7 +24,7 @@ const config: Config = {
           "200": "#141413",
           "300": "#7D8087",
           DEFAULT: "#000000",
-        },
+        }, 
         white: {
           "100": "#F7F7F7",
           DEFAULT: "#FFFFFF",
@@ -49,4 +49,3 @@ const config: Config = {
 };
 
 export default config;
- 

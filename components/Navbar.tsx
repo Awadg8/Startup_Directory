@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { auth, signOut, signIn } from "../../auth";
+import { auth, signOut, signIn } from "../auth";
 
 const Navbar = async () => {
   const session = await auth();
@@ -17,7 +17,7 @@ const Navbar = async () => {
           {session && session?.user ? (
             <>
               <Link href="/startup/create">
-                ̥<span>Create</span>
+               <span>Create</span>
               </Link>
 
               <form
