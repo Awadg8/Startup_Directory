@@ -2,7 +2,7 @@ import { defineField, defineType } from "sanity";
 
 export const playlist = defineType({
   name: "playlist",
-  title: "playlists",
+  title: "Playlists",
   type: "document",
   fields: [
     defineField({
@@ -17,7 +17,7 @@ export const playlist = defineType({
       },
     }),
     defineField({
-      name: "author",
+      name: "select", 
       type: "array",
       of: [{ type: "reference", to: [{type: "startup"}]}]
     }),

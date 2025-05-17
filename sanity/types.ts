@@ -133,7 +133,7 @@ export type Playlist = {
   _rev: string;
   title?: string;
   slug?: Slug;
-  author?: Array<{
+  select?: Array<{
     _ref: string;
     _type: "reference";
     _weak?: boolean;

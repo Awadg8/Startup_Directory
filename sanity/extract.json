@@ -712,7 +712,7 @@
         },
         "optional": true
       },
-      "author": {
+      "select": {
         "type": "objectAttribute",
         "value": {
           "type": "array",
