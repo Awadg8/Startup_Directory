@@ -21,19 +21,12 @@ const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
   const id = (await params).id;
 
   // Implemented parallel fetching
-
-  // const [post, { select: editorPosts }] = await Promise.all([
-  //   client.fetch(STARTUPS_BY_ID_QUERY, { id }),
-  //   client.fetch(PLAYLIST_BY_SLUG_QUERY, {
-  //     slug: "editor-picks-new",
-  //   }),
-  // ]);
-
-  const post = await client.fetch(STARTUPS_BY_ID_QUERY, { id });
-
-  const { select: editorPosts } = await client.fetch(PLAYLIST_BY_SLUG_QUERY, {
-    slug: "editors-picks",
-  });
+  const [post, { select: editorPosts }] = await Promise.all([
+    client.fetch(STARTUPS_BY_ID_QUERY, { id }),
+    client.fetch(PLAYLIST_BY_SLUG_QUERY, {
+      slug: "editors-picks",
+    }),
+  ]);
 
   if (!post) {
     return notFound();

@@ -17,17 +17,6 @@ export default async function Home({
 
   const posts = await client.fetch(STARTUPS_QUERY, params);
 
-  // const posts =  [{
-  //   _createdAt: new Date(),
-  //   views: 55,
-  //   author: { _id: 1, name: 'Awadhesh'},
-  //   _id: 1,
-  //   description: "This is description",
-  //   image: "https://static.vecteezy.com/system/resources/previews/021/863/785/large_2x/ai-robot-thinking-with-hand-on-chin-artificial-intelligence-glowing-light-background-generative-ai-photo.jpeg",
-  //   category: "Robots",
-  //   title: "We Robots"
-  // }]
-
   return (
     <>
       {/* Hero Section */}

@@ -10,7 +10,6 @@ import { formSchema } from "@/lib/validation";
 import { z } from "zod";
 import { toast } from "sonner";
 import { useRouter } from "next/navigation";
-import { log } from "console";
 import { createPitch } from "@/lib/actions";
 
 const StartupForm = () => {
@@ -61,6 +60,7 @@ const StartupForm = () => {
 
   const [state, formAction, isPending] = useActionState(handleFormSubmit, {
     error: "",
+    status: "INITIAL"
   });
 
   return (

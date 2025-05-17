@@ -17,9 +17,9 @@ export const playlist = defineType({
       },
     }),
     defineField({
-      name: "select", 
+      name: "select",
       type: "array",
-      of: [{ type: "reference", to: [{type: "startup"}]}]
+      of: [{ type: "reference", to: [{ type: "startup" }] }],
     }),
   ],
 });
